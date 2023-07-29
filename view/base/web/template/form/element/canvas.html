@@ -1,0 +1,50 @@
+<div>
+    <canvas
+        id="canvas"
+        width="512"
+        height="512"
+        class="admin__control-text"
+        data-bind="
+        event: {change: userChanges},
+        value: value,
+        hasFocus: focused,
+        valueUpdate: valueUpdate,
+        attr: {
+            name: inputName,
+            placeholder: placeholder,
+            'aria-describedby': noticeId,
+            id: uid,
+            disabled: disabled,
+            maxlength: 255
+    },
+     afterRender: function (element) {
+            onRender(element);
+        },
+"
+    ></canvas>
+</div>
+<div style="margin-top:5px">
+    <span>Size: </span>
+    <input
+        type="range"
+        min="1"
+        max="50"
+        value="25"
+        class="size"
+        id="sizeRange"
+    />
+</div>
+<div style="margin-top:5px; display: none">
+    <span>Color: </span>
+    <input type="radio" name="colorRadio" value="#87878778" checked />
+    <label for="#87878778">Mask</label>
+</div>
+<div style="margin-top:5px">
+    <button class="file-uploader-button action-secondary" id="clear" >Clear</button>
+    <p>
+        Upload an image and use the brush to draw on it
+    </p>
+    <input id="upload" class="file-uploader-button action-primary"  type="file" accept="image/*" />
+</div>
+
+
