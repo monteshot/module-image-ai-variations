@@ -1,8 +1,8 @@
 <div>
     <canvas
         id="canvas"
-        width="512"
-        height="512"
+        width="1024"
+        height="1024"
         class="admin__control-text"
         data-bind="
         event: {change: userChanges},
@@ -36,15 +36,18 @@
 </div>
 <div style="margin-top:5px; display: none">
     <span>Color: </span>
-    <input type="radio" name="colorRadio" value="#87878778" checked />
-    <label for="#87878778">Mask</label>
+    <input type="radio" name="colorRadio" value="black" checked />
+    <label for="black">Mask</label>
 </div>
 <div style="margin-top:5px">
-    <button class="file-uploader-button action-secondary" id="clear" >Clear</button>
     <p>
         Upload an image and use the brush to draw on it
     </p>
-    <input id="upload" class="file-uploader-button action-primary"  type="file" accept="image/*" />
+    <button class="file-uploader-button action-secondary" id="clear" >Clear</button>
+    <input id="originalImage" class="file-uploader-button action-secondary"  type="file" accept="image/*" />
+    <button data-bind="click: generateData" class="file-uploader-button action-primary" id="generate">Generate</button>
 </div>
+
+
 
 
